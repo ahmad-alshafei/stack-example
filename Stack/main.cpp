@@ -8,10 +8,12 @@ int *p;
 
 void push (int value);
 int pop();
-void display();
-bool isEnpty();
+
+bool isEmpty();
 bool isFull();
-void displa();
+
+void display();
+void display2();
 
 
 
@@ -23,12 +25,12 @@ int main() {
     push(2);
     push(3);
     pop();
-
+    
     push(4);
     pop();
     pop();
     push(5);
-
+    
     display();
     
     return 0;
@@ -36,30 +38,28 @@ int main() {
 
 
 
-void push(int value ) {
-    p=new int;
-    p=&top;
-    if (top == SIZE-1){
+void push(int value) {
+    p = new int;
+    p = &top;
+    if (top == SIZE-1) {
         cout << " Stsck is Full" << endl;
-    }
-    else {
+    } else {
         top++;
         stack[top] = value;
     }
 }
 
-int pop(){
-    if (top == -1){
+int pop() {
+    if (top == -1) {
         return -1;
-    }
-    else{
+    } else{
         return stack[top--];
     }
 }
 
 void display(){
     cout << endl;
-
+    
     if (top == -1){
         cout << " Stsck is Not defind" << endl;
     }
@@ -68,36 +68,31 @@ void display(){
             cout <<" - "<< stack[i]<<" ";
         }
         cout << endl;
-
+        
     }
-
+    
 }
 
-void displa(){
-        for ( int i = 0 ; i <= top ; i--){
-            cout <<" - "<< stack[i]<<" ";
-        }
+void display2(){
+    for (int i = 0 ; i <= top ; i--){
+        cout << " - " << stack[i] << " ";
+    }
 }
 
-bool isEnpty(){
-    if ( top == -1){
+bool isEmpty(){
+    if (top == -1) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }
 
 
 bool isFull(){
-    if ( top == SIZE -1){
+    if (top == SIZE -1){
         return false;
-    }
-    else {
+    } else {
         return true;
     }
-
+    
 }
-
-
-
