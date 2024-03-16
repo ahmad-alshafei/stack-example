@@ -30,6 +30,7 @@ int main() {
     pop();
     pop();
     push(5);
+    push(6);
     
     display();
     
