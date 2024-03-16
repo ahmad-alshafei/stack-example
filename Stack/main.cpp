@@ -45,8 +45,7 @@ void push(int value) {
     if (top == SIZE-1) {
         cout << " Stsck is Full" << endl;
     } else {
-        top++;
-        stack[top] = value;
+        stack[++top] = value;
     }
 }
 
